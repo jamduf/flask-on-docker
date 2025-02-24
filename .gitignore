@@ -1,7 +1,7 @@
 # Ignore environment variable files
 .env.prod
 .env.prod.db
-.env.*
+.env*
 *.db
 *.sqlite
 *.log
@@ -15,10 +15,10 @@ docker-compose.override.yml
 *.vol
 
 # Ignore Python bytecode files
-*__pycache__/
+__pycache__/
 *.pyc
 *.pyo
-
+env/
 # Ignore virtual environment
 venv/
 .env/
@@ -29,6 +29,8 @@ venv/
 *.swo
 .DS_Store
 Thumbs.db
-
+.DS_Store
+services/web/__pycache__/
+services/web/env/
 # Ignore Flask migrations
 migrations/

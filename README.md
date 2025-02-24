@@ -15,13 +15,16 @@ This repo contains a Flask web application that runs using Docker and nginx. The
    cd flask-on-docker
 ```
 ### 3: Set up Environment Variables
-Add a file called `.env.dev` in `services/web/`
+Add a file called `.env.dev` in the root file.
 
 Add the environment variables:
 ```sh
 FLASK_APP=project/__init__.py
 FLASK_DEBUG=1
 DATABASE_URL=postgresql://hello_flask:hello_flask@db:5432/hello_flask_dev
+SQL_HOST=db
+SQL_PORT=5432
+DATABASE=postgres
 ```
 
 ### 4: Build and Start:

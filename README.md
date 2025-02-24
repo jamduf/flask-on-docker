@@ -41,3 +41,22 @@ To shut down, use:
 ```sh
 docker compose down
 ```
+
+## Production Mode
+If using for production mode, create a file called `.env.prod` in the root file. 
+
+Add the environment variables:
+```sh
+FLASK_APP=project/__init__.py
+FLASK_DEBUG=0
+DATABASE_URL=postgresql://hello_flask:hello_flask_prod@db:5432/hello_flask_prod
+SQL_HOST=db
+SQL_PORT=5432
+DATABASE=hello_flask_prod
+```
+
+to run the app, use 
+```sh
+docker compose -f docker-compose.prod.yml up --build
+```
+
